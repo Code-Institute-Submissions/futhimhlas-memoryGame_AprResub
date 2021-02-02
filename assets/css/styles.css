@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Yusei+Magic&display=swap');
+
+body{
+    background-color: black;
+    margin: 15px 30px;
+    font-family: 'Yusei Magic';
+    text-align: center;
+}
+
+/* Game Board */
+.tile { 
+    position: relative;
+}
+
+.tile img{
+    width: 95%;
+    height: 95%;
+    border-radius: 10%;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
