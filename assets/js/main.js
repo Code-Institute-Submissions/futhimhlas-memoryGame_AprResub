@@ -18,6 +18,8 @@ const tiles = document.querySelectorAll('.tile'); // Generates list of all eleme
 
 // Double click protection
 
+// Cards disappearing after being matched
+
 
 
 
