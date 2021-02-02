@@ -7,6 +7,10 @@ body{
     text-align: center;
 }
 
+.buttons{
+    margin-bottom: 30px;
+}
+
 /* Game Board */
 .tile { 
     position: relative;
@@ -22,4 +26,25 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+}
+
+@media only screen and (min-width: 992px) {
+.tile-boards{
+margin-left: 150px;
+margin-right: 150px;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+.tile-boards{
+margin-left: 200px;
+margin-right: 200px;
+}
+}
+
+@media only screen and (min-width: 1400px) {
+.tile-boards{
+margin-left: 400px;
+margin-right: 400px;
+}
 }
