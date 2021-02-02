@@ -6,13 +6,7 @@ body{
     font-family: 'Yusei Magic';
     text-align: center;
     color: #ffeeff;
-}
-p{
-    margin: 15px 45px;
-}
-
-.buttons{
-    margin: 30px;
+    display: "hidden";
 }
 
 /* Game Board */
@@ -42,10 +36,6 @@ p{
     top: 0;
     left: 0;
 }
-
-/*.flip{
-
-}*/
 
 @media only screen and (min-width: 992px) {
 .tile-boards{
