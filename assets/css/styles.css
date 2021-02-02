@@ -5,6 +5,7 @@ body{
     margin: 15px 30px;
     font-family: 'Yusei Magic';
     text-align: center;
+    color: #ffeeff;
 }
 
 .buttons{
@@ -14,6 +15,16 @@ body{
 /* Game Board */
 .tile { 
     position: relative;
+    transform-style: preserve-3d;
+    transform: scale(1);
+}
+.tile:active{
+    transform: scale(0.95);
+    transition: 0.4s;
+}
+
+.tile-boards{
+    perspective: 500px;
 }
 
 .tile img{
@@ -27,6 +38,10 @@ body{
     top: 0;
     left: 0;
 }
+
+/*.flip{
+
+}*/
 
 @media only screen and (min-width: 992px) {
 .tile-boards{
