@@ -7,9 +7,12 @@ body{
     text-align: center;
     color: #ffeeff;
 }
+p{
+    margin: 15px 45px;
+}
 
 .buttons{
-    margin-bottom: 30px;
+    margin: 30px;
 }
 
 /* Game Board */
@@ -20,11 +23,12 @@ body{
 }
 .tile:active{
     transform: scale(0.95);
-    transition: 0.4s;
+    transition: 0.25;
 }
 
 .tile-boards{
     perspective: 500px;
+    margin-top: 15px;
 }
 
 .tile img{
