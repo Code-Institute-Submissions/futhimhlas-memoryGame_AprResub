@@ -22,6 +22,9 @@ As a user, I would like to have fun playing this memory game.
 ## Features left to Implement
 .
 
+## Wireframes
+My project is based on this initial wireframe mockup which can be found in this repository.
+
 ## Technologies used
 ### [HTML](https://www.w3.org/html/)
 HTML was used for the basic structure
