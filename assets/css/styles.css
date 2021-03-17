@@ -10,49 +10,51 @@ body{
 }
 
 /* Game Board */
-.tile { 
+.tile-wrap { 
     position: relative;
     transform-style: preserve-3d;
-    transform: scale(1);
+    margin-bottom: 15px;
 }
 .tile:active{
     transform: scale(0.95);
     transition: 0.25;
 }
 
-.tile-boards{
+.tile-board{
     perspective: 500px;
     margin-top: 15px;
 }
 
-.tile img{
+.tile-front img, .tile-back img{
     width: 95%;
     height: 95%;
     border-radius: 10%;
 }
 
-.back {
+.tile-back img {
     position: absolute;
     top: 0;
     left: 0;
+    width: 90%;
+    height: 90%;
 }
 
 @media only screen and (min-width: 992px) {
-.tile-boards{
+.tile-board{
 margin-left: 150px;
 margin-right: 150px;
 }
 }
 
 @media only screen and (min-width: 1200px) {
-.tile-boards{
+.tile-board{
 margin-left: 200px;
 margin-right: 200px;
 }
 }
 
 @media only screen and (min-width: 1400px) {
-.tile-boards{
+.tile-board{
 margin-left: 400px;
 margin-right: 400px;
 }
