@@ -29,6 +29,11 @@ body{
     width: 95%;
     height: 95%;
     border-radius: 10%;
+    backface-visibility: hidden;
+}
+
+.tile-front{
+    transform: rotateY(180deg);
 }
 
 .tile-back { 
