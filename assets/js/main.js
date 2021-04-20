@@ -1,6 +1,14 @@
 $(document).ready(function(){
-    let tiles = $(".tile-wrap");
+    let tiles = document.querySelectorAll(".tile-wrap");
     console.log(tiles)
+    
+    function flipTiles(){
+        this.classList.toggle("flip-tile");
+    }
+
+    for(let i = 0; i < tiles.length; i++){
+        tiles[i].addEventListener("click", flipTiles)
+    }; // Calls flip tile function which then flips each tile as it is clicked
 });
 // Generates list of all elements with the class tile and moves into our tiles constant
 
