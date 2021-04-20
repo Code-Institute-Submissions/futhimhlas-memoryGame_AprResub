@@ -1,4 +1,7 @@
-// Makes sure board loads in fully so as to stop users from seeing images too early
+$(document).ready(function(){
+    let tiles = $(".tile-wrap");
+    console.log(tiles)
+});
 // Generates list of all elements with the class tile and moves into our tiles constant
 
 // Randomizes tile order
