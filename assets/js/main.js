@@ -1,8 +1,5 @@
 // Makes sure board loads in fully so as to stop users from seeing images too early
-$( document.body ).ready(function() {
-  $("body").fadeIn(2500);
-});
-const tiles = document.querySelectorAll('.tile'); // Generates list of all elements with the class tile and moves into our tiles constant
+// Generates list of all elements with the class tile and moves into our tiles constant
 
 // Randomizes tile order
 
