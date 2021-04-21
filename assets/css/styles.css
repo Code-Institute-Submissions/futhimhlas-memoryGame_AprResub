@@ -19,7 +19,6 @@ body{
 
 .tile-wrap.flip-tile{
     transform: rotateY(180deg);
-    backface-visibility: hidden;
 }
 
 .tile-board{
