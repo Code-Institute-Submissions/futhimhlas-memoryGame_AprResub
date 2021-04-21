@@ -19,6 +19,7 @@ body{
 
 .tile-wrap.flip-tile{
     transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
 
 .tile-board{
@@ -43,12 +44,11 @@ body{
     left: 0;
 }
 
-.end-game-modal{
+.end-game{
     display: none;
-    z-index: 1;
 }
 
-.end-game-modal-content{
+.end-game-content{
     position: relative;
 }
 

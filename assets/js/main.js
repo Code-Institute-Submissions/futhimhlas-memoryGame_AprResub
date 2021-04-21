@@ -68,7 +68,7 @@ $(document).ready(function () {
     // endStateCheck checks to see if all the pairs have been made. Once all have been made the winning modul pops up
     function endStateCheck(b) {
         if (b === 8) {
-            document.getElementById("modal").style.display = "block";
+            document.getElementById("end-game").style.display = "block";
         }
     }
 
