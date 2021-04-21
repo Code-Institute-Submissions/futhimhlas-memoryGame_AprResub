@@ -6,6 +6,7 @@ $(document).ready(function(){
     let hasFlippedTile = false;
     let boardLock = false;
     let turns = 0;
+    let endState = 0;
     let moveCount = $("#live-score");
     
     function flipTiles(){
@@ -30,6 +31,8 @@ $(document).ready(function(){
     function tileMatchCheck(){
         if (firstTile.dataset.image === secondTile.dataset.image){
             removeTile();
+            endState ++;
+            endStateCheck(endState);
             return;
         }
 
@@ -57,6 +60,12 @@ $(document).ready(function(){
         boardLock = false;
         firstTile = null;
         secondTile = null;
+    }
+
+    function endStateCheck(b){
+        if(b === 8){
+            alert("Game Over!");
+        };
     }
 
     for(let i = 0; i < tiles.length; i++){
