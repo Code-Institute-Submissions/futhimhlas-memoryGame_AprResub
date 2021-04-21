@@ -19,7 +19,9 @@ As a user, I would like to be rewarded for 'winning' the game
 * A HTML element congratulating users on completing the game will appear as users finish the game.
 
 ## Purpose and Value
-The purpose of my website is for users to have a fun, short experience that can be enjoyed
+The purpose of my website is for users to have a fun, short experience that can be enjoyed in their desktop web browser. A memory game is playable by anyone that can use a computer.
+A short two minute break can be spent on my game and users should feel like they've accomplished something, even if it's small. The shuffle feature allows for users to play multiple rounds
+without doing the same thing twice whilst serving its purpose of keeping users entertained.
 
 ## Features
 ### Load In
@@ -43,6 +45,9 @@ I would like to implement increasing difficulty levels. This would be done by ha
 By clicking on the buttons users could change the game board size or change the speed at which the tiles turn over. The faster they turn over and the bigger the board gets; the harder the game gets.
 Another feature I would have liked to implement is a better restart tool. Instead of reloading the page, I would've like to build a function that resets the game state compleetly without
 reloading the page. Another reset button could be added before the end game pop-in in case users make a mistake and would like to restart.
+
+A better looking score tracker would also be on my update list as I feel a lot can be done with that feature. Also a local storage leaderboard could be added so that users can compare
+their scores against themselves.
 
 ## Wireframes
 My project is based on this initial wireframe mockup which can be found in this repository under the [wireframes directory](assets/wireframe/Memorygamewireframe.pdf).
@@ -72,9 +77,26 @@ in the images directory, under the readmeImages folder.
 Javascript was also tested as it was implemented using the port command "python3 -m http.server" and by refreshing the page (with ctrl + shift + mouseclick) to ensure the code was working
 as intended. Variables and functions were console logged as they were intialised/manipulated to ensure the desired result was obtained. Github's git commands were used to 
 ensure working code was saved and pushed correctly into my deployed site. 
-The deployed site was tested in Google chrome, Opera and Microsoft to ensure all elements were responsive and that the javascript executed correctly in all 3 browsers on desktop.
+The deployed site was tested in Google chrome, Opera and Microsoft to ensure all elements were responsive and that the javascript executed correctly in all 3 browsers on desktop. No bugs
+were found in either 3 browser on desktop. Screenshots of all 3 browsers can be found in the readmeImages directory.
 
+A bug on mobile exists in which the backface visibility doesn't toggle corrrectly when accessing the site through a mobile. On 2 different iPhone models the tile face would show even 
+when tiles were flipped. Also once pairs were correctly identified the wrong image would stay. The restart, shuffle and flip animations all display and work correctly across all the 
+platforms I ran my deployed site on.
 
+Placing all of my JS in a document.ready function also fized the issue of sometimes the images below the tiles would load first. This would defeat the purpose of the game as users would be able to see the 
+position off all the images as the page loaded. This guards my suer story goal of creating a memory game which test a users memory. 
+
+No issues arose with the flip animation, the length and perspective of the animation were tweaked until I found them appealing and have remained so through the projects development. A fix aimed
+at my mobile issue did effect the smoothness of the animation and would cause the entire animating div to disappear when clicked, but through git commits i was able to move back to a version of my site that had the smooth animations.
+
+The functions for the logic behind my tiles were tested mostly through running my site in the chrome browser from the command "python3 -m http.server". I tested against double clicking the same tile and clicking a 3rd tile whilst 
+the first 2 hadn't finished their animation. My site is protected from these bad user inputs as my "game-board" locks after two cards are chosen. i couldn't break this lock by just clicking so I believe
+my game is well protected against this.
+
+The restart functionality was tested by playing through the game in my browser. Upon completion, tiles will move position thanks to the shuffle function and the move counter will reset to 0.
+
+The project has also been passed through a HTML, CSS and JS validator and any warnings flagged have been fixed.
 
 ## Deployment
 My project has been deployed to gitpages using the following procedure:
