@@ -21,6 +21,9 @@ $(document).ready(function(){
 
         secondTile = this;
 
+        turns ++;
+        scoreUpdate(turns);
+
         tileMatchCheck();
     }
 
@@ -59,6 +62,7 @@ $(document).ready(function(){
     for(let i = 0; i < tiles.length; i++){
         tiles[i].addEventListener("click", flipTiles);
     }; // Calls flip tile function which then flips each tile as it is clicked
+
     
     function shuffle(a){ // Modified version of fischer yates shuffle. .before method handles moving the elements 
     let j;
@@ -69,10 +73,9 @@ $(document).ready(function(){
 return this; // function works better with 'this' included
     };
 shuffle(gameBoard);
-/*function scoreUpdate(turns){
-    document.getElementById("live-score") = " Score:" + turns;
-    console.log(turns);
-}*/
+function scoreUpdate(a){
+    document.getElementById("live-score").innerHTML = " Moves: " + a;
+};
 });
 
 
