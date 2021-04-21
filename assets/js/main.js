@@ -3,11 +3,12 @@ $(document).ready(function(){
     let gameBoard = $(".tile-board").children() //captures all divs of my gameboard which then allows for them to be shuffled
 
     let firstTile, secondTile; //Intializes variables to hold our two cards
-    let hasFlippedTile = false;
-    let boardLock = false;
-    let turns = 0;
-    let endState = 0;
-    let moveCount = $("#live-score");
+    let hasFlippedTile = false; //
+    let boardLock = false; //When true, new cards cannot be clicked
+    let turns = 0; // Live score tracker
+    let endState = 0; //Keeps track of Game progress
+    let moveCount = $("#live-score"); // Container for html element housing scores
+    let resetButton = document.getElementById("reset-button") // Container for button housing reset
     
     function flipTiles(){
         if (boardLock) return;
@@ -54,7 +55,7 @@ $(document).ready(function(){
             resetGameState();
         }, 1000)
     }
-
+    // resetGameState allows the player to continue with the game after making a correct match
     function resetGameState(){
         hasFlippedTile = false;
         boardLock = false;
@@ -62,15 +63,19 @@ $(document).ready(function(){
         secondTile = null;
     }
 
+    // endStateCheck checks to see if all the pairs have been made. Once all have been made the winning modul pops up
     function endStateCheck(b){
         if(b === 8){
-            alert("Game Over!");
+            document.getElementById("modal").style.display="block";
         };
     }
 
-    for(let i = 0; i < tiles.length; i++){
-        tiles[i].addEventListener("click", flipTiles);
-    }; // Calls flip tile function which then flips each tile as it is clicked
+    // gameReady adds the click event listeners to every tile, allowing for the game to start.
+    function gameReady(){
+        for(let i = 0; i < tiles.length; i++){
+        tiles[i].addEventListener("click", flipTiles); // Calls flip tile function which then flips each tile as it is clicked
+    }; 
+}
 
     
     function shuffle(a){ // Modified version of fischer yates shuffle. .before method handles moving the elements 
@@ -84,7 +89,16 @@ return this; // function works better with 'this' included
 shuffle(gameBoard);
 function scoreUpdate(a){
     document.getElementById("live-score").innerHTML = " Moves: " + a;
+    document.getElementById("end-score").innerHTML = a
 };
+
+
+resetButton.addEventListener("click", gameReset);
+function gameReset(){
+    location.reload();
+}
+gameReady()
+
 });
 
 

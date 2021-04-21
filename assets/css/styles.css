@@ -43,13 +43,14 @@ body{
     left: 0;
 }
 
-/*.tile-back img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90%;
-    height: 90%;
-} */
+.end-game-modal{
+    display: none;
+    z-index: 1;
+}
+
+.end-game-modal-content{
+    position: relative;
+}
 
 @media only screen and (min-width: 992px) {
 .tile-board{
